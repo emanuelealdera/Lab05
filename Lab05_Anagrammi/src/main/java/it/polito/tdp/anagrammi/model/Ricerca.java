@@ -21,7 +21,8 @@ public class Ricerca {
 	
 	private void ricorsione (String parziale, int livello, List <Character> rimanenti) {
 		if (rimanenti.isEmpty()) {
-			soluzione.add(parziale);
+			if (!soluzione.contains(parziale))
+				soluzione.add(parziale);
 		}
 		for (Character ch : rimanenti) {
 			String prova = parziale + ch;

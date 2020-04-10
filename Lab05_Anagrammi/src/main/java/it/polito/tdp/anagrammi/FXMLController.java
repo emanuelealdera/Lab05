@@ -37,6 +37,11 @@ public class FXMLController {
     			this.corretti.setText("Please insert only letters in the word!!");
     			return;
     	}}
+    	if (parola.length()>8) {
+    		this.corretti.setText("Si prega di inserire parole più corte di 8 caratteri!!");
+    		return;
+    	}
+    		
     	String corrette=""; 
     	String nonCorrette="";
     	
